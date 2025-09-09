@@ -7,3 +7,19 @@ This project uses the following open-source libraries:
 - [ESP32 BLE Arduino](https://github.com/nkolban/ESP32_BLE_Arduino)
 
 Parts of the implementation are based on example sketches provided with these libraries.
+
+This project consists of two parts:
+
+BLE Sender (ESP32)
+
+Reads ECG, accelerometer, and gyroscope data.
+
+Sends the data over BLE using custom characteristics.
+
+BLE Receiver (Python script)
+
+Connects to the ESP32 BLE device.
+
+Receives real-time notifications for ECG, accelerometer, and gyroscope.
+
+Saves the collected data to ECG_results.txt in seven columns: ECG [mV], Acceleration [m²/s²] (x/y/z), Gyroscope [°/s] (x/y/z).
